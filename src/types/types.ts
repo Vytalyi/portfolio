@@ -3,7 +3,7 @@ export interface NavProps {
 }
 
 export interface NavLinkProps {
-    className: string,
+    className?: string,
     url: string;
     text: string;
     active: boolean;

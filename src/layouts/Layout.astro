@@ -1,6 +1,6 @@
 ---
 import type { PageNameType } from "../types/types";
-import Nav from "../components/Nav.astro";
+import Nav from "../components/Nav";
 export interface Props {
 	title: string;
 	pageName: PageNameType;
@@ -25,9 +25,10 @@ const { title, pageName } = Astro.props;
 	</head>
 	<body>
 		<Nav
+			client:load
 			items={[
-				{ url: "#", text: "Index", active: pageName === 'index' },
-				{ url: "#", text: "Dev", active: pageName === 'dev' },
+				{ url: "#", text: "Index", active: pageName === "index" },
+				{ url: "#", text: "Dev", active: pageName === "dev" },
 			]}
 		/>
 		<slot />
