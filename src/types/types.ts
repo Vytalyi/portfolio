@@ -1,12 +1,12 @@
 export interface NavProps {
-    items: Array<NavLinkProps>
+  items: NavLinkProps[];
 }
 
 export interface NavLinkProps {
-    className?: string,
-    url: string;
-    text: string;
-    active: boolean;
+  className?: string;
+  url: string;
+  text: string;
+  active: boolean;
 }
 
-export type PageNameType = 'index' | 'dev'
+export type PageNameType = 'index' | 'dev';
