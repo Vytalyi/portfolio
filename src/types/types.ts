@@ -9,4 +9,4 @@ export interface NavLinkProps {
   active: boolean;
 }
 
-export type PageNameType = 'index' | 'dev';
+export type PageNameType = 'home' | 'case_studies' | 'contacts';
