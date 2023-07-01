@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import type { NavProps } from '../types/types';
 import NavLink from './NavLink';
 
-export default function Item(props: NavProps) {
+const Nav = (props: NavProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -20,51 +20,13 @@ export default function Item(props: NavProps) {
               }}
             >
               <span className='sr-only'>Open main menu</span>
-              {mobileOpen ? (
-                <svg
-                  className='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth='1.5'
-                  stroke='currentColor'
-                  aria-hidden='true'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M6 18L18 6M6 6l12 12'
-                  ></path>
-                </svg>
-              ) : (
-                <svg
-                  className='block h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth='1.5'
-                  stroke='currentColor'
-                  aria-hidden='true'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
-                  ></path>
-                </svg>
-              )}
+              {mobileOpen ? <CloseIcon /> : <OpenIcon />}
             </button>
           </div>
           <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex flex-shrink-0 items-center'>
-              <img
-                className='block h-8 w-auto lg:hidden'
-                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
-                alt='Your Company'
-              />
-              <img
-                className='hidden h-8 w-auto lg:block'
-                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
-                alt='Your Company'
-              />
+              <Logo className='block h-8 w-auto lg:hidden' />
+              <Logo className='hidden h-8 w-auto lg:block' />
             </div>
             <div className='hidden sm:ml-6 sm:block'>
               <div className='flex space-x-4'>
@@ -96,4 +58,44 @@ export default function Item(props: NavProps) {
       ) : null}
     </nav>
   );
-}
+};
+
+const OpenIcon = () => (
+  <svg
+    className='block h-6 w-6'
+    fill='none'
+    viewBox='0 0 24 24'
+    strokeWidth='1.5'
+    stroke='currentColor'
+    aria-hidden='true'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+    ></path>
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg
+    className='h-6 w-6'
+    fill='none'
+    viewBox='0 0 24 24'
+    strokeWidth='1.5'
+    stroke='currentColor'
+    aria-hidden='true'
+  >
+    <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12'></path>
+  </svg>
+);
+
+const Logo = (props: { className?: string }) => (
+  <img
+    className={props.className}
+    src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
+    alt='Your Company'
+  />
+);
+
+export default Nav;
