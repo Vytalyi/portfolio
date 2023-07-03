@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const allCaseStudies = await getCollection('case_studies');
+allCaseStudies.sort((a, b) =>
+  new Date(a.data.end) < new Date(b.data.end) ? 1 : -1,
+);
+---
+
+<Layout title='Case Studies' pageName='case_studies'>
+  <div
+    class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-[972px] xl:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
+  >
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full'>
+        {
+          allCaseStudies.map((caseStudy) => (
+            <div class='flex flex-col shadow hover:shadow-md w-full rounded-lg overflow-hidden cursor-pointer'>
+              <a
+                href={`${import.meta.env.BASE_URL}case_studies/${
+                  caseStudy.slug
+                }`}
+                class='block max-w-sm h-full p-6 border border-gray-600 rounded-lg shadow hover:bg-neutral-900'
+              >
+                <h5 class='mb-2 text-2xl font-bold tracking-tight text-slate-200'>
+                  {caseStudy.data.name}
+                </h5>
+                <p class='font-normal text-gray-500'>{caseStudy.data.client}</p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

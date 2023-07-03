@@ -1,0 +1,117 @@
+---
+import {
+  getCollection,
+  getEntryBySlug,
+  type CollectionEntry,
+} from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import ContentTitle from '../../components/typography/ContentTitle.astro';
+import ContentBody from '../../components/typography/ContentBody.astro';
+import ContentParagraph from '../../components/typography/ContentParagraph.astro';
+
+export async function getStaticPaths() {
+  const allCaseStudies = await getCollection('case_studies');
+  return allCaseStudies.map((caseStudy) => ({
+    params: {
+      slug: caseStudy.slug,
+    },
+  }));
+}
+
+const { slug = '' } = Astro.params;
+const caseStudy = (await getEntryBySlug(
+  'case_studies',
+  slug,
+)) as CollectionEntry<'case_studies'>;
+
+const start = caseStudy.data.end.getTime();
+const end = caseStudy.data.start.getTime();
+const diffTime = Math.abs(start - end);
+const months = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
+const remMonths = months % 12;
+const remYears = Math.floor(months / 12);
+
+const durationStr =
+  (remYears > 0 ? `${remYears} year${remYears > 1 ? 's' : ''}` : '') +
+  (remMonths > 0 ? ` ${remMonths} month${remMonths > 1 ? 's' : ''}` : '');
+---
+
+<Layout title='Case Studies' pageName='case_studies'>
+  <Hero>
+    <h1
+      class='mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl text-white'
+    >
+      {caseStudy?.data.name}
+    </h1>
+    <p
+      class='text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 text-gray-400'
+    >
+      {caseStudy?.data.client}
+    </p>
+    <dl class='flex flex-wrap justify-end sm:px-20 px-0 mt-4'>
+      {
+        [
+          ['Duration', durationStr],
+          ['Country', caseStudy.data.location],
+          ['Industry', caseStudy.data.industry],
+          ['Type', caseStudy.data.type],
+          ['Size', caseStudy.data.size],
+        ].map(
+          (item) =>
+            item[1] != null &&
+            item[1] !== '' && (
+              <div class='flex flex-col items-center justify-start px-2 flex-1 pt-4 sm:basis-auto basis-1/2'>
+                <dt class='mb-2 text-gray-300'>{item[0]}</dt>
+                <dd class='text-xl font-extrabold text-slate-200'>{item[1]}</dd>
+              </div>
+            ),
+        )
+      }
+    </dl>
+  </Hero>
+  <div
+    class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-[972px] xl:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
+  >
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>About project</ContentTitle>
+      <ContentBody>
+        <ContentParagraph>{caseStudy.data.project}</ContentParagraph>
+      </ContentBody>
+    </div>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>Role</ContentTitle>
+      <ContentBody>
+        <ContentParagraph>{caseStudy.data.role}</ContentParagraph>
+      </ContentBody>
+    </div>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>Responsibilities</ContentTitle>
+      <ContentBody>
+        <ContentParagraph>{caseStudy.data.responsibilities}</ContentParagraph>
+      </ContentBody>
+    </div>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>Tech Stack</ContentTitle>
+      <ContentBody>
+        <ContentParagraph>
+          {caseStudy?.data.skills.join(', ')}
+        </ContentParagraph>
+      </ContentBody>
+    </div>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>What were Done</ContentTitle>
+      <ContentBody>
+        {
+          caseStudy?.data.results
+            .concat(['Numerous smaller things.'])
+            .map((feat) => (
+              <ContentParagraph className='pb-4'>
+                {'- ' + feat}
+              </ContentParagraph>
+            ))
+        }
+      </ContentBody>
+    </div>
+  </div>
+</Layout>

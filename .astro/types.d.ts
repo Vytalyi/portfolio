@@ -188,7 +188,128 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"experience": {
+		"case_studies": {
+"ab-testing-at-maxymiser.md": {
+	id: "ab-testing-at-maxymiser.md";
+  slug: "ab-testing-at-maxymiser";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"budgeting-apps-at-logicnucleo.md": {
+	id: "budgeting-apps-at-logicnucleo.md";
+  slug: "budgeting-apps-at-logicnucleo";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"cloudpages-for-exacttarget.md": {
+	id: "cloudpages-for-exacttarget.md";
+  slug: "cloudpages-for-exacttarget";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"community-for-qvc.md": {
+	id: "community-for-qvc.md";
+  slug: "community-for-qvc";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"corporate-plattform-for-pearson.md": {
+	id: "corporate-plattform-for-pearson.md";
+  slug: "corporate-plattform-for-pearson";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"docx-reporter-for-logicnucleo.md": {
+	id: "docx-reporter-for-logicnucleo.md";
+  slug: "docx-reporter-for-logicnucleo";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"enterprise-store-for-blackberry.md": {
+	id: "enterprise-store-for-blackberry.md";
+  slug: "enterprise-store-for-blackberry";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"i18n-for-exacttarget.md": {
+	id: "i18n-for-exacttarget.md";
+  slug: "i18n-for-exacttarget";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"medical-aggregator-for-gl.md": {
+	id: "medical-aggregator-for-gl.md";
+  slug: "medical-aggregator-for-gl";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"modeling-tool-for-newera.md": {
+	id: "modeling-tool-for-newera.md";
+  slug: "modeling-tool-for-newera";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"mogration-for-general-electrics.md": {
+	id: "mogration-for-general-electrics.md";
+  slug: "mogration-for-general-electrics";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"online-editor-for-cf.md": {
+	id: "online-editor-for-cf.md";
+  slug: "online-editor-for-cf";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"report-analyzer-for-emp.md": {
+	id: "report-analyzer-for-emp.md";
+  slug: "report-analyzer-for-emp";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"responsive-migration-for-ticketmaster.md": {
+	id: "responsive-migration-for-ticketmaster.md";
+  slug: "responsive-migration-for-ticketmaster";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"store-for-travis-perkins.md": {
+	id: "store-for-travis-perkins.md";
+  slug: "store-for-travis-perkins";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"stores-for-sdi.md": {
+	id: "stores-for-sdi.md";
+  slug: "stores-for-sdi";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+"website-and-hub-for-sh.md": {
+	id: "website-and-hub-for-sh.md";
+  slug: "website-and-hub-for-sh";
+  body: string;
+  collection: "case_studies";
+  data: InferEntrySchema<"case_studies">
+} & { render(): Render[".md"] };
+};
+"experience": {
 "epam.md": {
 	id: "epam.md";
   slug: "epam";
