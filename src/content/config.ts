@@ -13,21 +13,23 @@ const experienceCollection = defineCollection({
 
 const caseStudiesCollection = defineCollection({
   type: 'content',
-  schema: z.object({
-    name: z.string(),
-    start: z.date(),
-    end: z.date().optional().default(new Date()),
-    size: z.string().optional(),
-    type: z.string(),
-    industry: z.string().optional(),
-    location: z.string().optional(),
-    project: z.string(),
-    client: z.string(),
-    role: z.string(),
-    responsibilities: z.string(),
-    skills: z.array(z.string()),
-    results: z.array(z.string()),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      start: z.date(),
+      end: z.date().optional().default(new Date()),
+      size: z.string().optional(),
+      type: z.string(),
+      industry: z.string().optional(),
+      location: z.string().optional(),
+      project: z.string(),
+      client: z.string().optional(),
+      role: z.string(),
+      responsibilities: z.string(),
+      skills: z.array(z.string()),
+      results: z.array(z.string()),
+      images: z.array(image()).optional().default([]),
+    }),
 });
 
 export const collections = {

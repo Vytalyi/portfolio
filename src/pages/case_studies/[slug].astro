@@ -4,6 +4,7 @@ import {
   getEntryBySlug,
   type CollectionEntry,
 } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import ContentTitle from '../../components/typography/ContentTitle.astro';
@@ -110,6 +111,16 @@ const durationStr =
                 {'- ' + feat}
               </ContentParagraph>
             ))
+        }
+      </ContentBody>
+    </div>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>Images</ContentTitle>
+      <ContentBody>
+        {
+          caseStudy.data.images.map((img) => (
+            <Image src={img} alt='' format='png' class='mb-4' />
+          ))
         }
       </ContentBody>
     </div>

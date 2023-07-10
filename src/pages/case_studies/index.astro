@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 
 const allCaseStudies = await getCollection('case_studies');
 allCaseStudies.sort((a, b) =>
@@ -10,7 +11,7 @@ allCaseStudies.sort((a, b) =>
 
 <Layout title='Case Studies' pageName='case_studies'>
   <div
-    class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-[972px] xl:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
+    class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
   >
     <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
       <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full'>
@@ -21,12 +22,26 @@ allCaseStudies.sort((a, b) =>
                 href={`${import.meta.env.BASE_URL}case_studies/${
                   caseStudy.slug
                 }`}
-                class='block max-w-sm h-full p-6 border border-gray-600 rounded-lg shadow hover:bg-neutral-900'
+                class='flex flex-col items-center border border-gray-600 rounded-lg shadow lg:flex-row lg:max-w-xl hover:bg-neutral-900'
               >
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-slate-200'>
-                  {caseStudy.data.name}
-                </h5>
-                <p class='font-normal text-gray-500'>{caseStudy.data.client}</p>
+                {caseStudy.data.images.length > 0 && (
+                  <Image
+                    src={caseStudy.data.images[0]}
+                    alt=''
+                    format='png'
+                    class='object-cover w-full rounded-t-lg lg:h-full lg:w-48 lg:rounded-none lg:rounded-l-lg'
+                  />
+                )}
+                <div class='flex flex-col justify-between p-4 leading-normal'>
+                  <h5 class='mb-2 text-2xl font-bold tracking-tight text-slate-200'>
+                    {caseStudy.data.name}
+                  </h5>
+                  <p class='font-normal text-gray-500'>
+                    {caseStudy.data.client != null
+                      ? caseStudy.data.client
+                      : caseStudy.data.project}
+                  </p>
+                </div>
               </a>
             </div>
           ))

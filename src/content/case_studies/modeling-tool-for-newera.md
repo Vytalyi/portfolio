@@ -26,4 +26,8 @@ results:
     "Prepared solution audit which allow team to identify gaps and prioritize remaining work.",
     "Supported succsesfull release.",
   ]
+images:
+  [
+    "./images/modeling-tool-for-newera/1.jpeg"
+  ]
 ---

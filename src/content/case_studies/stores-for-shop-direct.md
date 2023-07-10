@@ -16,6 +16,15 @@ results:
     "Conducted discovery phase onsite for frontend dev team, with intensive learning of complicated ATG plattform, its technical specifications & frontend specific corporate processes & standards.",
     "Created independent plattform to gather & share unified components, speedup development and not being blocked by ATG technical issues. Plattform was built on top of Bootstrap and jQuery, with Gulp for bundling into scripts. Appearance of plattform allowed to turn out dangerous tendency of growing amount UI bugs.",
     "Increased overall code quality by sharing experience & best practices with customer team.",
+    "Developed & supported special components for Black Friday.",
     "Enormous amount of bug fixes.",
+  ]
+images:
+  [
+    "./images/stores-for-shop-direct/1.png",
+    "./images/stores-for-shop-direct/2.png",
+    "./images/stores-for-shop-direct/3.png",
+    "./images/stores-for-shop-direct/4.png",
+    "./images/stores-for-shop-direct/5.png",
   ]
 ---

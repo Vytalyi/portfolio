@@ -16,4 +16,11 @@ results:
     "Continious SCRUM development of frontend functionality for several stores and corporate portals built on Hybris. Frontend development was mainly done with jQuery, jQuery Mobile, and HTML markup transformed at JSP syntax.",
     "Shared experience and best practises with backend team, allowing them to better understand & organize frontend in Hybris architecture.",
   ]
+images:
+  [
+    "./images/stores-for-travis-perkins/1.jpg",
+    "./images/stores-for-travis-perkins/2.jpg",
+    "./images/stores-for-travis-perkins/3.jpg",
+    "./images/stores-for-travis-perkins/4.jpg",
+  ]
 ---

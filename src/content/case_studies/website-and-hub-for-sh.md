@@ -33,4 +33,13 @@ results:
     "Local team expansion made based on efficiency of cooperation.",
     "Improvement to process of creation designs, advocating imopratancy of component oriented strategy, change notifications, close cooperation with dev team to understand tech limitations on early stages.",
   ]
+images:
+  [
+    "./images/website-and-hub-for-sh/1.png",
+    "./images/website-and-hub-for-sh/2.png",
+    "./images/website-and-hub-for-sh/3.png",
+    "./images/website-and-hub-for-sh/4.png",
+    "./images/website-and-hub-for-sh/5.png",
+    "./images/website-and-hub-for-sh/6.png",
+  ]
 ---

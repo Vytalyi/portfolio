@@ -28,4 +28,10 @@ results:
     "Developed enourmous amount of pages & responsive components like Cards, Grids, Expandable lists, Navigations, Custom range sliders, etc... witih focus on pixel perfect design and Responsive behavior. Frontend development made at independent lightweight app and mostly it was intensive usage of Vanilla Javascript, HTML and CSS strictly following BEM methodology.",
     "Supported backend devs with integrating components into MVC codebase.",
   ]
+images:
+  [
+    "./images/responsive-migration-for-ticketmaster/1.png",
+    "./images/responsive-migration-for-ticketmaster/2.png",
+    "./images/responsive-migration-for-ticketmaster/3.png",
+  ]
 ---

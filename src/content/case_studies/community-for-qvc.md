@@ -17,4 +17,10 @@ results:
     "Prepared & manually deployed numerous releases.",
     "Local team expansion made from 1 to 2 devs.",
   ]
+images:
+  [
+    "./images/community-for-qvc/1.png",
+    "./images/community-for-qvc/2.png",
+    "./images/community-for-qvc/3.png",
+  ]
 ---

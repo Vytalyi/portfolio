@@ -44,4 +44,12 @@ results:
     "added themes support. Solution built on top of CSS variables and includes complex refactoring of CSS modules to inherit properly from CSS variables splitted into several layers, so that new themes might override styles on high-global or low-component level.",
     "performed global UX redesign. Solution contains complex refactoring & restructuring  tons of modules, plus writing conceptually new UX to bring interaction into a new level.",
   ]
+images:
+  [
+    "./images/online-editor-for-cf/1.png",
+    "./images/online-editor-for-cf/2.png",
+    "./images/online-editor-for-cf/3.png",
+    "./images/online-editor-for-cf/4.png",
+    "./images/online-editor-for-cf/5.png",
+  ]
 ---

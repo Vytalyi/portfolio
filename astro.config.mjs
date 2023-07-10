@@ -8,4 +8,7 @@ export default defineConfig({
   site: 'https://vytalyi.github.io',
   base: '/portfolio',
   integrations: [tailwind(), preact()],
+  experimental: {
+    assets: true,
+  },
 });

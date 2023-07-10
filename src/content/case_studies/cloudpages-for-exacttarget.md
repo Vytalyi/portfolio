@@ -18,4 +18,9 @@ results:
     "Onsite onboarding made for local team & setting up processes.",
     "Released first version of product in close cooperation with offshore team.",
   ]
+images:
+  [
+    "./images/cloudpages-for-exacttarget/1.jpeg",
+    "./images/cloudpages-for-exacttarget/2.jpeg",
+  ]
 ---

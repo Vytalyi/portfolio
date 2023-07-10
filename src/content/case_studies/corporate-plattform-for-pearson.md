@@ -5,7 +5,7 @@ end: 2019-10-01
 type: Outsource
 size: Large
 industry: Higher Education
-client: Pearson is the world’s leading learning company, serving customers in nearly 200 countries with digital content, assessments, qualifications, and data.
+client: Pearson is the world’s leading learning multinational publishing and education company, serving customers in nearly 200 countries with digital content, assessments, qualifications, and data. As of 2017, it is the largest education company, and it was once the largest book publisher in the world.
 location: UK
 project: Product contains several independent plattforms on various domains which needed to be optimized by extracting business logic into common solution providing single unified UX and coding standards. New plattform built with AEM & Hybris, plus Fraktal Web UI tool for development of reusable frontend components.
 role: Operating as a Frontend Tech Lead of 5 devs withing a cross-functional team of 30+ people.
@@ -28,5 +28,10 @@ results:
     "Contributed to corporate standards & library with reusable components built on top of Fraktal Web UI.",
     "Added multi-country support AEM & Hybris solutions.",
     "Successfull local team expansion made from 2 to 5 frontend developers.",
+  ]
+images:
+  [
+    "./images/corporate-plattform-for-pearson/1.png",
+    "./images/corporate-plattform-for-pearson/2.png"
   ]
 ---

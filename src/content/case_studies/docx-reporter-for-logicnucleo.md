@@ -16,4 +16,5 @@ results:
     "Developed library from scratch with heavily designed content.",
     "Integrated several products with library.",
   ]
+images: ["./images/docx-reporter-for-logicnucleo/1.png"]
 ---

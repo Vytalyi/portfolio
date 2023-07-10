@@ -4,9 +4,8 @@ start: 2012-01-01
 end: 2012-05-30
 type: Internal pet project.
 size: Small
-client: Internal pet project for RnD Department.
 location: Ukraine
-project: Internal pet project is a ASP.Net application with real time UX with charts for monitoring massive data measurements from medical devices. Solution include Admin for patients, devices, channels management & other configurations.
+project: Internal pet project for RnD department, an ASP.Net application with real time charts for monitoring massive data measurements from medical devices, plus Admin for various conigurations of devices, channels & other.
 role: Operating as a .Net Developer within a team of 5 devs.
 responsibilities: Product development, cross code review, database opptimizations.
 skills: ["ASP.NET", "JavaScript", "jQuery", "HighCharts", "MSSQL", "MySQl"]
@@ -17,4 +16,7 @@ results:
     "Developed helper apps to speedup development - Bing Translator to provide default translations, Resource Manager to sync resources with latest translations, Code Validator to collect all places with translations, built on regexes..",
     "Developed Visual Studio plugin with automated detection of ",
   ]
+images: [
+  "./images/medical-aggregator-for-gl/1.png",
+]
 ---

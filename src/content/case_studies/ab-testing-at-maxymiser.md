@@ -5,7 +5,7 @@ end: 2014-08-30
 type: Product
 size: Medium
 industry: Advertising Services
-client: Maxymiser empowers brands to transform every digital interaction into seamless, relevant and engaging customer experiences with its cloud-based testing, personalization and cross-channel optimization solutions. Maxymiser’s Customer Experience Optimization suite quickly delivers measurable results to every client through A/B and multivariate testing, segmentation, behavioral targeting and product recommendations for the web, mobile, social and email.
+client: Maxymiser empowers brands to transform every digital interaction into seamless, relevant and engaging customer experiences with its cloud-based testing, personalization and cross-channel optimization solutions.
 location: DE
 project: Development of AB testing campaigns for various clients, primarily from DE. Tests were built on top of unique Maxymiser mmcore library which allow to heavily adjust website's content without changing the codebase, plus Admin portal.
 role: Operating as a Tech Lead within team of 4 frontend devs and 10+ people.
@@ -22,5 +22,10 @@ results:
   [
     "Launched enourmous amount of campaigns for such clients as VIX, SIXT, Kaspersky, T-Mobile, etc... Technology stack depends on client's frontend, byt mostly its jQuery and Vanilla Javascript solutions, plus HTML/CSS.",
     "Successfull local team expansion from 2 to 4 frontend devs.",
+  ]
+images:
+  [
+    "./images/ab-testing-at-maxymiser/1.jpeg",
+    "./images/ab-testing-at-maxymiser/2.jpeg",
   ]
 ---

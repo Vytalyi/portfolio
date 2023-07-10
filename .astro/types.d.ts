@@ -287,16 +287,16 @@ declare module 'astro:content' {
   collection: "case_studies";
   data: InferEntrySchema<"case_studies">
 } & { render(): Render[".md"] };
-"store-for-travis-perkins.md": {
-	id: "store-for-travis-perkins.md";
-  slug: "store-for-travis-perkins";
+"stores-for-shop-direct.md": {
+	id: "stores-for-shop-direct.md";
+  slug: "stores-for-shop-direct";
   body: string;
   collection: "case_studies";
   data: InferEntrySchema<"case_studies">
 } & { render(): Render[".md"] };
-"stores-for-sdi.md": {
-	id: "stores-for-sdi.md";
-  slug: "stores-for-sdi";
+"stores-for-travis-perkins.md": {
+	id: "stores-for-travis-perkins.md";
+  slug: "stores-for-travis-perkins";
   body: string;
   collection: "case_studies";
   data: InferEntrySchema<"case_studies">
