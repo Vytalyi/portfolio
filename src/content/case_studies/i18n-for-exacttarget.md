@@ -19,6 +19,6 @@ results:
     "Developed Visual Studio plugin with automated detection of ",
   ]
 images: [
-  "./images/i18n-for-exacttarget/1.png"
+  "./images/i18n-for-exacttarget/1.jpg"
 ]
 ---

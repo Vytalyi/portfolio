@@ -20,7 +20,7 @@ results:
   ]
 images:
   [
-    "./images/cloudpages-for-exacttarget/1.jpeg",
-    "./images/cloudpages-for-exacttarget/2.jpeg",
+    "./images/cloudpages-for-exacttarget/1.jpg",
+    "./images/cloudpages-for-exacttarget/2.jpg",
   ]
 ---

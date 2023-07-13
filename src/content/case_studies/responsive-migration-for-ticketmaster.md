@@ -30,8 +30,13 @@ results:
   ]
 images:
   [
-    "./images/responsive-migration-for-ticketmaster/1.png",
-    "./images/responsive-migration-for-ticketmaster/2.png",
-    "./images/responsive-migration-for-ticketmaster/3.png",
+    "./images/responsive-migration-for-ticketmaster/1.jpg",
+    "./images/responsive-migration-for-ticketmaster/2.jpg",
+    "./images/responsive-migration-for-ticketmaster/3.jpg",
+    "./images/responsive-migration-for-ticketmaster/4.jpg",
+    "./images/responsive-migration-for-ticketmaster/5.jpg",
+    "./images/responsive-migration-for-ticketmaster/6.jpg",
+    "./images/responsive-migration-for-ticketmaster/7.jpg",
+    "./images/responsive-migration-for-ticketmaster/8.jpg",
   ]
 ---

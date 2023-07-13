@@ -30,8 +30,9 @@ results:
   ]
 images:
   [
-    "./images/mogration-for-general-electrics/1.png",
-    "./images/mogration-for-general-electrics/2.png",
-    "./images/mogration-for-general-electrics/3.png",
+    "./images/mogration-for-general-electrics/1.jpg",
+    "./images/mogration-for-general-electrics/2.jpg",
+    "./images/mogration-for-general-electrics/3.jpg",
+    "./images/mogration-for-general-electrics/4.jpg",
   ]
 ---

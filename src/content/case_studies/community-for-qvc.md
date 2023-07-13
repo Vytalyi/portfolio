@@ -19,8 +19,9 @@ results:
   ]
 images:
   [
-    "./images/community-for-qvc/1.png",
-    "./images/community-for-qvc/2.png",
-    "./images/community-for-qvc/3.png",
+    "./images/community-for-qvc/1.jpg",
+    "./images/community-for-qvc/2.jpg",
+    "./images/community-for-qvc/3.jpg",
+    "./images/community-for-qvc/4.jpg",
   ]
 ---

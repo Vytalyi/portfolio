@@ -17,6 +17,6 @@ results:
     "Developed Visual Studio plugin with automated detection of ",
   ]
 images: [
-  "./images/medical-aggregator-for-gl/1.png",
+  "./images/medical-aggregator-for-gl/1.jpg",
 ]
 ---

@@ -46,10 +46,11 @@ results:
   ]
 images:
   [
-    "./images/online-editor-for-cf/1.png",
-    "./images/online-editor-for-cf/2.png",
-    "./images/online-editor-for-cf/3.png",
-    "./images/online-editor-for-cf/4.png",
-    "./images/online-editor-for-cf/5.png",
+    "./images/online-editor-for-cf/1.jpg",
+    "./images/online-editor-for-cf/2.jpg",
+    "./images/online-editor-for-cf/3.jpg",
+    "./images/online-editor-for-cf/4.jpg",
+    "./images/online-editor-for-cf/5.jpg",
+    "./images/online-editor-for-cf/6.jpg",
   ]
 ---

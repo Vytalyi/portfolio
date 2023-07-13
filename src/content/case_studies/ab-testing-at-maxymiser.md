@@ -25,7 +25,8 @@ results:
   ]
 images:
   [
-    "./images/ab-testing-at-maxymiser/1.jpeg",
-    "./images/ab-testing-at-maxymiser/2.jpeg",
+    "./images/ab-testing-at-maxymiser/1.jpg",
+    "./images/ab-testing-at-maxymiser/2.jpg",
+    "./images/ab-testing-at-maxymiser/3.jpg",
   ]
 ---

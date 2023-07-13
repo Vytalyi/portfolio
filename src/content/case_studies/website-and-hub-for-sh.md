@@ -35,11 +35,11 @@ results:
   ]
 images:
   [
-    "./images/website-and-hub-for-sh/1.png",
-    "./images/website-and-hub-for-sh/2.png",
-    "./images/website-and-hub-for-sh/3.png",
-    "./images/website-and-hub-for-sh/4.png",
-    "./images/website-and-hub-for-sh/5.png",
-    "./images/website-and-hub-for-sh/6.png",
+    "./images/website-and-hub-for-sh/1.jpg",
+    "./images/website-and-hub-for-sh/2.jpg",
+    "./images/website-and-hub-for-sh/3.jpg",
+    "./images/website-and-hub-for-sh/4.jpg",
+    "./images/website-and-hub-for-sh/5.jpg",
+    "./images/website-and-hub-for-sh/6.jpg",
   ]
 ---

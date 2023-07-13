@@ -35,7 +35,7 @@ results:
   ]
 images:
   [
-    "./images/report-analyzer-for-emp/3.png"
+    "./images/report-analyzer-for-emp/1.jpg"
   ]
 
 ---

@@ -21,10 +21,11 @@ results:
   ]
 images:
   [
-    "./images/stores-for-shop-direct/1.png",
-    "./images/stores-for-shop-direct/2.png",
-    "./images/stores-for-shop-direct/3.png",
-    "./images/stores-for-shop-direct/4.png",
-    "./images/stores-for-shop-direct/5.png",
+    "./images/stores-for-shop-direct/1.jpg",
+    "./images/stores-for-shop-direct/2.jpg",
+    "./images/stores-for-shop-direct/3.jpg",
+    "./images/stores-for-shop-direct/4.jpg",
+    "./images/stores-for-shop-direct/5.jpg",
+    "./images/stores-for-shop-direct/6.jpg",
   ]
 ---

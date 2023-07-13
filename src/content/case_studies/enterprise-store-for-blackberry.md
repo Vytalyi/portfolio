@@ -31,6 +31,6 @@ results:
   ]
 images:
   [
-    "./images/enterprise-store-for-blackberry/1.png"
+    "./images/enterprise-store-for-blackberry/1.jpeg"
   ]
 ---

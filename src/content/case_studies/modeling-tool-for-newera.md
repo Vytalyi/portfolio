@@ -28,6 +28,6 @@ results:
   ]
 images:
   [
-    "./images/modeling-tool-for-newera/1.jpeg"
+    "./images/modeling-tool-for-newera/1.jpg"
   ]
 ---

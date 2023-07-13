@@ -27,10 +27,10 @@ allCaseStudies.sort((a, b) =>
                 {caseStudy.data.images.length > 0 && (
                   <div class='sm:h-48 sm:w-full lg:w-48 lg:h-full lg:shrink-0'>
                     <Image
-                      src={caseStudy.data.images[0]}
-                      alt='Cover'
-                      format='png'
                       class='link-img object-cover h-full w-full rounded-t-lg lg:rounded-none lg:rounded-l-lg'
+                      src={caseStudy.data.images[0]}
+                      quality='low'
+                      alt='Cover'
                     />
                   </div>
                 )}

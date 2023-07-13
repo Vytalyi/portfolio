@@ -16,5 +16,5 @@ results:
     "Developed various features & pages with Webforms and ASP.Net.",
     "Fixed various bugs across apps.",
   ]
-images: ["./images/budgeting-apps-at-logicnucleo/1.png"]
+images: ["./images/budgeting-apps-at-logicnucleo/1.jpg"]
 ---

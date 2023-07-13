@@ -31,7 +31,9 @@ results:
   ]
 images:
   [
-    "./images/corporate-plattform-for-pearson/1.png",
-    "./images/corporate-plattform-for-pearson/2.png"
+    "./images/corporate-plattform-for-pearson/1.jpg",
+    "./images/corporate-plattform-for-pearson/2.jpg",
+    "./images/corporate-plattform-for-pearson/3.jpg",
+    "./images/corporate-plattform-for-pearson/4.jpg",
   ]
 ---

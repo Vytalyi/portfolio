@@ -22,5 +22,7 @@ images:
     "./images/stores-for-travis-perkins/2.jpg",
     "./images/stores-for-travis-perkins/3.jpg",
     "./images/stores-for-travis-perkins/4.jpg",
+    "./images/stores-for-travis-perkins/5.jpg",
+    "./images/stores-for-travis-perkins/6.jpg",
   ]
 ---

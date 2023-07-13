@@ -36,6 +36,10 @@ const remYears = Math.floor(months / 12);
 const durationStr =
   (remYears > 0 ? `${remYears} year${remYears > 1 ? 's' : ''}` : '') +
   (remMonths > 0 ? ` ${remMonths} month${remMonths > 1 ? 's' : ''}` : '');
+
+const images = caseStudy.data.images.filter(
+  (img) => img.height > 300 && img.width > 300,
+);
 ---
 
 <Layout title='Case Studies' pageName='case_studies'>
@@ -114,15 +118,26 @@ const durationStr =
         }
       </ContentBody>
     </div>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
-      <ContentTitle>Images</ContentTitle>
-      <ContentBody>
-        {
-          caseStudy.data.images.map((img) => (
-            <Image src={img} alt='' format='png' class='mb-4' />
-          ))
-        }
-      </ContentBody>
-    </div>
+    {
+      images.length > 0 && (
+        <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+          <ContentTitle>Screenshots</ContentTitle>
+          <ContentBody>
+            <div class='grid sm:grid-cols-2 grid-cols-1 gap-6'>
+              {images.map((img, i) => (
+                <div>
+                  <Image
+                    class='mb-4 object-contain bg-gray-300 h-full w-full'
+                    src={img}
+                    quality='low'
+                    alt={`Example ${i + 1}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </ContentBody>
+        </div>
+      )
+    }
   </div>
 </Layout>
