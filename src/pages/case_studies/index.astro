@@ -13,24 +13,26 @@ allCaseStudies.sort((a, b) =>
   <div
     class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
   >
-    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
-      <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full'>
+    <div class='mx-auto max-w-7xl px-0 sm:px-6 lg:px-8 my-8'>
+      <div class='grid grid-cols-1 sm:grid-cols-2 sm:grid-gap-6 gap-10 w-full'>
         {
           allCaseStudies.map((caseStudy) => (
-            <div class='flex flex-col shadow hover:shadow-md w-full rounded-lg overflow-hidden cursor-pointer'>
+            <div class='flex flex-col shadow hover:shadow-md w-full rounded-lg overflow-hidden'>
               <a
                 href={`${import.meta.env.BASE_URL}case_studies/${
                   caseStudy.slug
                 }`}
-                class='flex flex-col items-center border border-gray-600 rounded-lg shadow lg:flex-row lg:max-w-xl hover:bg-neutral-900'
+                class='link flex flex-col items-center h-full border border-gray-600 rounded-lg shadow lg:flex-row lg:w-xl hover:bg-neutral-900'
               >
                 {caseStudy.data.images.length > 0 && (
-                  <Image
-                    src={caseStudy.data.images[0]}
-                    alt=''
-                    format='png'
-                    class='object-cover w-full rounded-t-lg lg:h-full lg:w-48 lg:rounded-none lg:rounded-l-lg'
-                  />
+                  <div class='sm:h-48 sm:w-full lg:w-48 lg:h-full lg:shrink-0'>
+                    <Image
+                      src={caseStudy.data.images[0]}
+                      alt='Cover'
+                      format='png'
+                      class='link-img object-cover h-full w-full rounded-t-lg lg:rounded-none lg:rounded-l-lg'
+                    />
+                  </div>
                 )}
                 <div class='flex flex-col justify-between p-4 leading-normal'>
                   <h5 class='mb-2 text-2xl font-bold tracking-tight text-slate-200'>
@@ -50,3 +52,12 @@ allCaseStudies.sort((a, b) =>
     </div>
   </div>
 </Layout>
+
+<style>
+  .link:hover {
+    /* eslint-disable-astro/no-unused-css-selector */
+    .link-img {
+      opacity: 0.9;
+    }
+  }
+</style>
