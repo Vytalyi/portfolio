@@ -346,6 +346,73 @@ declare module 'astro:content' {
   data: InferEntrySchema<"experience">
 } & { render(): Render[".md"] };
 };
+"langs": {
+"eng.md": {
+	id: "eng.md";
+  slug: "eng";
+  body: string;
+  collection: "langs";
+  data: InferEntrySchema<"langs">
+} & { render(): Render[".md"] };
+"pol.md": {
+	id: "pol.md";
+  slug: "pol";
+  body: string;
+  collection: "langs";
+  data: InferEntrySchema<"langs">
+} & { render(): Render[".md"] };
+"ukr.md": {
+	id: "ukr.md";
+  slug: "ukr";
+  body: string;
+  collection: "langs";
+  data: InferEntrySchema<"langs">
+} & { render(): Render[".md"] };
+};
+"skills": {
+"be.md": {
+	id: "be.md";
+  slug: "be";
+  body: string;
+  collection: "skills";
+  data: InferEntrySchema<"skills">
+} & { render(): Render[".md"] };
+"build.md": {
+	id: "build.md";
+  slug: "build";
+  body: string;
+  collection: "skills";
+  data: InferEntrySchema<"skills">
+} & { render(): Render[".md"] };
+"crm.md": {
+	id: "crm.md";
+  slug: "crm";
+  body: string;
+  collection: "skills";
+  data: InferEntrySchema<"skills">
+} & { render(): Render[".md"] };
+"fe.md": {
+	id: "fe.md";
+  slug: "fe";
+  body: string;
+  collection: "skills";
+  data: InferEntrySchema<"skills">
+} & { render(): Render[".md"] };
+"markup.md": {
+	id: "markup.md";
+  slug: "markup";
+  body: string;
+  collection: "skills";
+  data: InferEntrySchema<"skills">
+} & { render(): Render[".md"] };
+"other.md": {
+	id: "other.md";
+  slug: "other";
+  body: string;
+  collection: "skills";
+  data: InferEntrySchema<"skills">
+} & { render(): Render[".md"] };
+};
 
 	};
 

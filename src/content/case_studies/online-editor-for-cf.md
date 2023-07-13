@@ -52,5 +52,7 @@ images:
     "./images/online-editor-for-cf/4.jpg",
     "./images/online-editor-for-cf/5.jpg",
     "./images/online-editor-for-cf/6.jpg",
+    "./images/online-editor-for-cf/7.jpg",
+    "./images/online-editor-for-cf/8.jpg",
   ]
 ---

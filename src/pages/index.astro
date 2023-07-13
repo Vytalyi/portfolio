@@ -13,6 +13,12 @@ import IconArrowRight1 from '../components/icons/IconArrowRight1.astro';
 const experiences = await getCollection('experience');
 experiences.sort((a, b) => (a.data.yearStart < b.data.yearStart ? 1 : -1));
 
+const skills = await getCollection('skills');
+skills.sort((a, b) => (a.data.order > b.data.order ? 1 : -1));
+
+const langs = await getCollection('langs');
+langs.sort((a, b) => (a.data.order > b.data.order ? 1 : -1));
+
 const expStartYear = experiences.reduce(
   (acc, cur) => (cur.data.yearStart < acc ? cur.data.yearStart : acc),
   Number.MAX_VALUE,
@@ -55,11 +61,24 @@ const expStartYear = experiences.reduce(
       >
         {
           [
-            { href: '#linkedin', icon: <IconLinkedin />, text: 'Linkedin' },
-            { href: '#github', icon: <IconGithub />, text: 'Github' },
-            { href: '#facebook', icon: <IconFacebook />, text: 'Facebook' },
+            {
+              href: 'https://www.linkedin.com/in/vitalii-denysenko-1b1a3b3b/',
+              icon: <IconLinkedin />,
+              text: 'Linkedin',
+            },
+            {
+              href: 'https://github.com/Vytalyi',
+              icon: <IconGithub />,
+              text: 'Github',
+            },
+            {
+              href: 'https://www.facebook.com/vitaliy.denisenko.58',
+              icon: <IconFacebook />,
+              text: 'Facebook',
+            },
           ].map((item) => (
             <a
+              target='_blank'
               href={item.href}
               class='mr-5 mb-5 lg:mb-0 hover:text-gray-400 flex gap-x-4 items-center'
             >
@@ -99,30 +118,34 @@ const expStartYear = experiences.reduce(
     <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
       <ContentTitle>Technical expertise</ContentTitle>
       <ContentBody>
+        {
+          skills.map((s) => (
+            <ContentParagraph>{s.data.skills.join(', ')}</ContentParagraph>
+          ))
+        }
+      </ContentBody>
+    </div>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
+      <ContentTitle>Education</ContentTitle>
+      <ContentBody>
         <ContentParagraph>
-          JavaScript, Typescript, React, Redux, Astro, Remix, Domvm, Backbone,
-          jQuery
+          2005 - 2011 master degree at “Computer systems and networking”
         </ContentParagraph>
         <ContentParagraph>
-          HTML, CSS, Pre-Processors, Semantic Markup, Responsive Design
+          National Aerospace University in Kharkiv, Ukraine
         </ContentParagraph>
-        <ContentParagraph>Rollup, Vite, Webpack, Gulp, Grunt</ContentParagraph>
-        <ContentParagraph>ThreeJS, Graphics 2D</ContentParagraph>
-        <ContentParagraph>
-          Node, Koa, Express, CouchDB, Mongo, My/MS Sql
-        </ContentParagraph>
-        <ContentParagraph>
-          Hybris, AEM, Sitecore, Prismic, ATG, DotNetNuke
-        </ContentParagraph>
-        <ContentParagraph>AB Testing</ContentParagraph>
       </ContentBody>
     </div>
     <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
       <ContentTitle>Languages</ContentTitle>
       <ContentBody>
-        <ContentParagraph>English: B2 (Intermediate)</ContentParagraph>
-        <ContentParagraph>Russian, Ukrainian: native</ContentParagraph>
-        <ContentParagraph>Polish: A1 (beginner)</ContentParagraph>
+        {
+          langs.map((s) => (
+            <ContentParagraph>
+              {s.data.name}: {s.data.level}
+            </ContentParagraph>
+          ))
+        }
       </ContentBody>
     </div>
   </div>

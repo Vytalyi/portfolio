@@ -33,9 +33,5 @@ results:
     "Released fully functional product which satisfy requirements, unit and e2e tests included. Product was developed iteratively, following Scrum best practices & corporate standards.",
     "Launching product in cloud, proving its technical specifications by Stress Testing.",
   ]
-images:
-  [
-    "./images/report-analyzer-for-emp/1.jpg"
-  ]
-
+images: ["./images/report-analyzer-for-emp/1.jpg"]
 ---
