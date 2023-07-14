@@ -5,6 +5,8 @@ export interface Props {
 const { className = '' } = Astro.props;
 ---
 
-<p class=`font-sans	text-lg leading-8 text-slate-300 text-justify ${className}`>
+<p
+  class=`first:mt-0 mt-4 font-sans	text-lg leading-8 text-slate-300 text-justify ${className}`
+>
   <slot />
 </p>

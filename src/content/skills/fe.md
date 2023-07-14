@@ -3,15 +3,23 @@ order: 1
 skills:
   [
     "JavaScript",
-    "Typescript",
+    "TypeScript",
     "React",
     "Redux",
+    "Styled-Components",
+    "Jest",
+    "Enzyme",
     "Astro",
     "Remix",
     "Domvm",
-    "Backbone",
     "jQuery",
+    "Ramda",
+    "AWS SDK",
     "ThreeJS",
-    "Graphics 2D",
+    "Backbone",
+    "RequireJS",
+    "Jasmine",
+    "PhantomJS",
+    "Puppeteer",
   ]
 ---

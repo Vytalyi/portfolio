@@ -2,7 +2,7 @@
 name: Docx reporter [Internal]
 start: 2011-11-01
 end: 2011-12-30
-type: Internal pet project.
+type: Internal pet project
 size: Small
 client: There was a business need at company to support generating of Word reports in .docx format in various products, so mission was to create highly customizable & flexible solution to satisfy requirements.
 location: Ukraine

@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageGalleryProps as Props } from '../types/types';
+
+const { images } = Astro.props;
+---
+
+<div class='grid sm:grid-cols-2 grid-cols-1 gap-6'>
+  {
+    images.map((img, i) => (
+      <div>
+        <Image
+          class='mb-4 object-contain bg-gray-300 h-full w-full'
+          src={img}
+          quality='low'
+          alt={`Example ${i + 1}`}
+        />
+      </div>
+    ))
+  }
+</div>

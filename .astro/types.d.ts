@@ -346,29 +346,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"experience">
 } & { render(): Render[".md"] };
 };
-"langs": {
-"eng.md": {
-	id: "eng.md";
-  slug: "eng";
-  body: string;
-  collection: "langs";
-  data: InferEntrySchema<"langs">
-} & { render(): Render[".md"] };
-"pol.md": {
-	id: "pol.md";
-  slug: "pol";
-  body: string;
-  collection: "langs";
-  data: InferEntrySchema<"langs">
-} & { render(): Render[".md"] };
-"ukr.md": {
-	id: "ukr.md";
-  slug: "ukr";
-  body: string;
-  collection: "langs";
-  data: InferEntrySchema<"langs">
-} & { render(): Render[".md"] };
-};
 "skills": {
 "be.md": {
 	id: "be.md";

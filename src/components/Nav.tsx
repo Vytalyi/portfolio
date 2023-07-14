@@ -12,11 +12,12 @@ const Nav = (props: NavProps) => {
 
   useEffect(() => {
     document.addEventListener('scroll', onScroll);
+    onScroll();
   }, []);
 
   return (
     <nav
-      className={`sticky top-0 duration-300 transition-colors ${
+      className={`sticky top-0 duration-300 transition-colors z-10 ${
         scroll ? 'bg-black opacity-90' : ''
       }`}
     >

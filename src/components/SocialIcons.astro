@@ -1,0 +1,32 @@
+---
+import IconLinkedin from '../components/icons/IconLinkedin.astro';
+import IconGithub from '../components/icons/IconGithub.astro';
+import IconFacebook from '../components/icons/IconFacebook.astro';
+
+export interface Props {
+  items: Array<{
+    href: string;
+    text: string;
+  }>;
+}
+const { items } = Astro.props;
+---
+
+<div
+  class='flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between'
+>
+  {
+    items.map((item) => (
+      <a
+        target='_blank'
+        href={item.href}
+        class='mr-5 mb-5 lg:mb-0 hover:text-gray-400 flex gap-x-4 items-center'
+      >
+        {item.text === 'Facebook' && <IconFacebook />}
+        {item.text === 'Github' && <IconGithub />}
+        {item.text === 'Linkedin' && <IconLinkedin />}
+        <p class='font-semibold text-lg'>{item.text}</p>
+      </a>
+    ))
+  }
+</div>

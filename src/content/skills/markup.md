@@ -1,5 +1,14 @@
 ---
 order: 2
 skills:
-  ["HTML", "CSS", "Pre-Processors", "Semantic Markup", "Responsive Design"]
+  [
+    "HTML",
+    "CSS",
+    "Tailwind",
+    "Bootstrap",
+    "Pre-Processors",
+    "Responsive Design",
+    "Semantic Markup",
+    "Accessibility",
+  ]
 ---

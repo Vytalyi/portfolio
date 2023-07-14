@@ -1,0 +1,20 @@
+---
+import type { CaseStudyStatsProps as Props } from '../types/types';
+
+const { stats } = Astro.props;
+---
+
+<dl class='flex flex-wrap justify-end sm:px-20 px-0 mt-4'>
+  {
+    stats.map(
+      ([key, value]) =>
+        value != null &&
+        value !== '' && (
+          <div class='flex flex-col items-center justify-start px-2 flex-1 pt-4 sm:basis-auto basis-1/2'>
+            <dt class='mb-2 text-gray-300'>{key}</dt>
+            <dd class='text-xl font-extrabold text-slate-200'>{value}</dd>
+          </div>
+        ),
+    )
+  }
+</dl>

@@ -4,7 +4,7 @@ start: 2020-02-01
 end: 2021-06-30
 type: Outsource
 size: Small
-industry: Computers and Electronics Manufacturing
+industry: Electronics Manufacturing
 client: SH is developing a revolutionary line of computer-augmented power tools, starting with a handheld CNC router. Project contents static & interactive web content plus user flows that better connect product with customers.
 location: UK, USA
 project: SH contains many connected projects and mission was to contribute into two of them called Website and Hub. For Website it was critical to quickly develop numerous components & gather them into several informational pages, with focus on strict deadline before the product announcment date. Hub, as a product on early stage, required development of user flows to post examples of phisical products with photos, instructions, recommendations, ratings, etc. All projects built with Express, React and Redux, plus SSR, Prismic CMS, and Storybook as a common components library shared across multiple projects. Additionally React components testing required with Ava & Enzyme.

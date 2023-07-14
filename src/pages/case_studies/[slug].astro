@@ -4,12 +4,13 @@ import {
   getEntryBySlug,
   type CollectionEntry,
 } from 'astro:content';
-import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import ContentTitle from '../../components/typography/ContentTitle.astro';
 import ContentBody from '../../components/typography/ContentBody.astro';
 import ContentParagraph from '../../components/typography/ContentParagraph.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+import CaseStudyStats from '../../components/CaseStudyStats.astro';
 
 export async function getStaticPaths() {
   const allCaseStudies = await getCollection('case_studies');
@@ -38,7 +39,7 @@ const durationStr =
   (remMonths > 0 ? ` ${remMonths} month${remMonths > 1 ? 's' : ''}` : '');
 
 const images = caseStudy.data.images.filter(
-  (img) => img.height > 300 && img.width > 300,
+  (img) => img.height > 500 && img.width > 500,
 );
 ---
 
@@ -54,26 +55,15 @@ const images = caseStudy.data.images.filter(
     >
       {caseStudy?.data.client}
     </p>
-    <dl class='flex flex-wrap justify-end sm:px-20 px-0 mt-4'>
-      {
-        [
-          ['Duration', durationStr],
-          ['Country', caseStudy.data.location],
-          ['Industry', caseStudy.data.industry],
-          ['Type', caseStudy.data.type],
-          ['Size', caseStudy.data.size],
-        ].map(
-          (item) =>
-            item[1] != null &&
-            item[1] !== '' && (
-              <div class='flex flex-col items-center justify-start px-2 flex-1 pt-4 sm:basis-auto basis-1/2'>
-                <dt class='mb-2 text-gray-300'>{item[0]}</dt>
-                <dd class='text-xl font-extrabold text-slate-200'>{item[1]}</dd>
-              </div>
-            ),
-        )
-      }
-    </dl>
+    <CaseStudyStats
+      stats={[
+        ['Duration', durationStr],
+        ['Country', caseStudy.data.location],
+        ['Industry', caseStudy.data.industry],
+        ['Type', caseStudy.data.type],
+        ['Size', caseStudy.data.size],
+      ]}
+    />
   </Hero>
   <div
     class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-[972px] xl:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
@@ -123,18 +113,7 @@ const images = caseStudy.data.images.filter(
         <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
           <ContentTitle>Screenshots</ContentTitle>
           <ContentBody>
-            <div class='grid sm:grid-cols-2 grid-cols-1 gap-6'>
-              {images.map((img, i) => (
-                <div>
-                  <Image
-                    class='mb-4 object-contain bg-gray-300 h-full w-full'
-                    src={img}
-                    quality='low'
-                    alt={`Example ${i + 1}`}
-                  />
-                </div>
-              ))}
-            </div>
+            <ImageGallery images={images} />
           </ContentBody>
         </div>
       )

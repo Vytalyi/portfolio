@@ -5,10 +5,10 @@ import ContentTitle from '../components/typography/ContentTitle.astro';
 import ContentBody from '../components/typography/ContentBody.astro';
 import ContentParagraph from '../components/typography/ContentParagraph.astro';
 import Hero from '../components/Hero.astro';
-import IconLinkedin from '../components/icons/IconLinkedin.astro';
-import IconGithub from '../components/icons/IconGithub.astro';
-import IconFacebook from '../components/icons/IconFacebook.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+import Experience from '../components/Experience.astro';
 import IconArrowRight1 from '../components/icons/IconArrowRight1.astro';
+import Badge from '../components/Badge.astro';
 
 const experiences = await getCollection('experience');
 experiences.sort((a, b) => (a.data.yearStart < b.data.yearStart ? 1 : -1));
@@ -16,13 +16,25 @@ experiences.sort((a, b) => (a.data.yearStart < b.data.yearStart ? 1 : -1));
 const skills = await getCollection('skills');
 skills.sort((a, b) => (a.data.order > b.data.order ? 1 : -1));
 
-const langs = await getCollection('langs');
-langs.sort((a, b) => (a.data.order > b.data.order ? 1 : -1));
-
 const expStartYear = experiences.reduce(
   (acc, cur) => (cur.data.yearStart < acc ? cur.data.yearStart : acc),
   Number.MAX_VALUE,
 );
+
+const socialLinks = [
+  {
+    href: 'https://www.linkedin.com/in/vitalii-denysenko-1b1a3b3b/',
+    text: 'Linkedin',
+  },
+  {
+    href: 'https://github.com/Vytalyi',
+    text: 'Github',
+  },
+  {
+    href: 'https://www.facebook.com/vitaliy.denisenko.58',
+    text: 'Facebook',
+  },
+];
 ---
 
 <Layout title='Home' pageName='home'>
@@ -43,7 +55,7 @@ const expStartYear = experiences.reduce(
     <h1
       class='mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl text-white'
     >
-      Software Engineer's portfolio
+      Frontend Engineer's portfolio
     </h1>
     <p
       class='mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48'
@@ -56,97 +68,65 @@ const expStartYear = experiences.reduce(
       class='px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36'
     >
       <span class='font-semibold text-gray-400 uppercase'>FEATURED IN</span>
-      <div
-        class='flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between'
-      >
-        {
-          [
-            {
-              href: 'https://www.linkedin.com/in/vitalii-denysenko-1b1a3b3b/',
-              icon: <IconLinkedin />,
-              text: 'Linkedin',
-            },
-            {
-              href: 'https://github.com/Vytalyi',
-              icon: <IconGithub />,
-              text: 'Github',
-            },
-            {
-              href: 'https://www.facebook.com/vitaliy.denisenko.58',
-              icon: <IconFacebook />,
-              text: 'Facebook',
-            },
-          ].map((item) => (
-            <a
-              target='_blank'
-              href={item.href}
-              class='mr-5 mb-5 lg:mb-0 hover:text-gray-400 flex gap-x-4 items-center'
-            >
-              {item.icon}
-              <p class='font-semibold text-lg'>{item.text}</p>
-            </a>
-          ))
-        }
-      </div>
+      <SocialIcons items={socialLinks} />
     </div>
   </Hero>
   <div
     class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-[972px] xl:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
   >
-    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
-      <ContentTitle>Experience</ContentTitle>
+    <div class='sm:mx-auto sm:max-w-4xl px-6 lg:px-8 mt-8 sm:mt-8'>
+      <ContentTitle>Summary</ContentTitle>
       <ContentBody>
-        <ul role='list'>
+        <ContentParagraph>
+          Hi! My name is Vitalii Denysenko. I am a Frontend Engineer based in
+          Warsaw, Poland. I help companies delivering hiqh quality products.
+          I've been operating as a Tech Lead for last 8 years. I turn great
+          ideas into great execution. I have experience on building winning
+          small-mid size teams.
+        </ContentParagraph>
+        <ContentParagraph>I grow as a T-shaped person.</ContentParagraph>
+        <ContentParagraph>
+          I rely on discipline more than motivation.
+        </ContentParagraph>
+        <ContentParagraph>
+          I'm the one who stays calm in a crisis.
+        </ContentParagraph>
+        <ContentParagraph>
+          Reach out to me if you are interested in cooperation.
+        </ContentParagraph>
+      </ContentBody>
+    </div>
+    <div
+      class='flex flex-col space-between sm:mx-auto sm:max-w-4xl sm:flex-row'
+    >
+      <div class='shrink-0 px-6 lg:px-8 mt-8 sm:mt-8'>
+        <ContentTitle>Experience</ContentTitle>
+        <ContentBody>
+          <Experience
+            items={experiences.map((exp) => ({
+              start: exp.data.yearStart,
+              end: exp.data.yearEnd,
+              company: exp.data.company,
+              position: exp.data.position,
+              now: exp.data.now,
+            }))}
+          />
+        </ContentBody>
+      </div>
+      <div class='px-6 lg:px-8 mt-8 mb-2 sm:my-8'>
+        <ContentTitle>Skillset</ContentTitle>
+        <ContentBody>
           {
-            experiences.map((exp) => (
-              <li class='flex justify-between gap-x-6'>
-                <ContentParagraph>
-                  {exp.data.company}
-                  {', '}
-                  {exp.data.yearStart}
-                  {' - '}
-                  {exp.data.now ? 'now' : exp.data.yearEnd}
-                  {', '}
-                  {exp.data.position}
-                </ContentParagraph>
-              </li>
+            skills.map((s) => (
+              <div class='flex flex-wrap mb-5'>
+                {s.data.skills.map((s) => (
+                  <Badge type='gray' text={s} />
+                ))}
+              </div>
             ))
           }
-        </ul>
-      </ContentBody>
-    </div>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
-      <ContentTitle>Technical expertise</ContentTitle>
-      <ContentBody>
-        {
-          skills.map((s) => (
-            <ContentParagraph>{s.data.skills.join(', ')}</ContentParagraph>
-          ))
-        }
-      </ContentBody>
-    </div>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
-      <ContentTitle>Education</ContentTitle>
-      <ContentBody>
-        <ContentParagraph>
-          2005 - 2011 master degree at “Computer systems and networking”
-        </ContentParagraph>
-        <ContentParagraph>
-          National Aerospace University in Kharkiv, Ukraine
-        </ContentParagraph>
-      </ContentBody>
-    </div>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8 my-8'>
-      <ContentTitle>Languages</ContentTitle>
-      <ContentBody>
-        {
-          langs.map((s) => (
-            <ContentParagraph>
-              {s.data.name}: {s.data.level}
-            </ContentParagraph>
-          ))
-        }
-      </ContentBody>
+        </ContentBody>
+      </div>
     </div>
   </div>
 </Layout>

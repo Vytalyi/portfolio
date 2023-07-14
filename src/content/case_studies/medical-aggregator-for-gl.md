@@ -2,7 +2,7 @@
 name: Medical Aggregator [Internal]
 start: 2012-01-01
 end: 2012-05-30
-type: Internal pet project.
+type: Internal pet project
 size: Small
 location: Ukraine
 project: Internal pet project for RnD department, an ASP.Net application with real time charts for monitoring massive data measurements from medical devices, plus Admin for various conigurations of devices, channels & other.
