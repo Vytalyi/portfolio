@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('eslint-config-vytalyi/prettier'),
+  ...require('eslint-config-hardx/prettier'),
 };

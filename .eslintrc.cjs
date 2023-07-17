@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint-config-vytalyi/eslint'],
+  extends: ['eslint-config-hardx/eslint'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

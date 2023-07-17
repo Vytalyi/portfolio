@@ -5,7 +5,7 @@ import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vytalyi.github.io',
+  site: 'https://hardx-87.github.io',
   base: '/portfolio',
   integrations: [tailwind(), preact()],
   experimental: {
