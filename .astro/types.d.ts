@@ -390,6 +390,29 @@ declare module 'astro:content' {
   data: InferEntrySchema<"skills">
 } & { render(): Render[".md"] };
 };
+"social_links": {
+"facebook.md": {
+	id: "facebook.md";
+  slug: "facebook";
+  body: string;
+  collection: "social_links";
+  data: InferEntrySchema<"social_links">
+} & { render(): Render[".md"] };
+"github.md": {
+	id: "github.md";
+  slug: "github";
+  body: string;
+  collection: "social_links";
+  data: InferEntrySchema<"social_links">
+} & { render(): Render[".md"] };
+"linkedin.md": {
+	id: "linkedin.md";
+  slug: "linkedin";
+  body: string;
+  collection: "social_links";
+  data: InferEntrySchema<"social_links">
+} & { render(): Render[".md"] };
+};
 
 	};
 

@@ -16,25 +16,12 @@ experiences.sort((a, b) => (a.data.yearStart < b.data.yearStart ? 1 : -1));
 const skills = await getCollection('skills');
 skills.sort((a, b) => (a.data.order > b.data.order ? 1 : -1));
 
+const socialLinks = await getCollection('social_links');
+
 const expStartYear = experiences.reduce(
   (acc, cur) => (cur.data.yearStart < acc ? cur.data.yearStart : acc),
   Number.MAX_VALUE,
 );
-
-const socialLinks = [
-  {
-    href: 'https://www.linkedin.com/in/vitalii-denysenko-1b1a3b3b/',
-    text: 'Linkedin',
-  },
-  {
-    href: 'https://github.com/hardx-87',
-    text: 'Github',
-  },
-  {
-    href: 'https://www.facebook.com/vitaliy.denisenko.58',
-    text: 'Facebook',
-  },
-];
 ---
 
 <Layout title='Home' pageName='home'>
@@ -68,7 +55,12 @@ const socialLinks = [
       class='px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36'
     >
       <span class='font-semibold text-gray-400 uppercase'>FEATURED IN</span>
-      <SocialIcons items={socialLinks} />
+      <SocialIcons
+        items={socialLinks.map((link) => ({
+          text: link.data.name,
+          href: link.data.url,
+        }))}
+      />
     </div>
   </Hero>
   <div

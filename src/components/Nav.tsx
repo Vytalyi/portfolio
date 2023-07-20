@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'preact/hooks';
-import type { NavProps } from '../types/types';
+import type { NavLinkProps, NavProps } from '../types/types';
 import NavLink from './NavLink';
 import IconOpenMenu from './icons/IconOpenMenu';
 import IconCloseMenu from './icons/IconCloseMenu';
 import IconLogo from './icons/IconLogo';
+import Dropdown from '../components/Dropdown';
 
 const Nav = (props: NavProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
 
-  const onScroll = (e: Event) => {
+  const onScroll = (e?: Event) => {
     setScroll(window.scrollY > 0);
   };
 
@@ -20,7 +21,7 @@ const Nav = (props: NavProps) => {
 
   return (
     <nav
-      className={`sticky top-0 duration-300 transition-colors z-10 ${
+      className={`sticky top-0 duration-300 transition-colors z-10 ${props.className} ${
         scroll ? 'bg-black opacity-90' : ''
       }`}
     >
@@ -48,11 +49,7 @@ const Nav = (props: NavProps) => {
             <div className='hidden sm:ml-6 sm:block'>
               <div className='flex space-x-4'>
                 {props.items.map((item) => (
-                  <NavLink
-                    {...item}
-                    key={'navLink_' + item.url}
-                    className='rounded-md px-3 py-2 text-sm font-medium'
-                  />
+                  <Item key={'navLink_' + item.text} {...item} className='text-sm' />
                 ))}
               </div>
             </div>
@@ -64,11 +61,7 @@ const Nav = (props: NavProps) => {
         <div className='sm:hidden' id='mobile-menu'>
           <div className='space-y-1 px-2 pb-3 pt-2'>
             {props.items.map((item) => (
-              <NavLink
-                {...item}
-                key={'navLink_' + item.url}
-                className='block rounded-md px-3 py-2 text-base font-medium'
-              />
+              <Item key={'navLink_' + item.text} {...item} className='block text-base' />
             ))}
           </div>
         </div>
@@ -76,5 +69,12 @@ const Nav = (props: NavProps) => {
     </nav>
   );
 };
+
+const Item = (props: NavLinkProps) =>
+  props.children != null && props.children.length > 0 ? (
+    <Dropdown className={props.className} item={props} />
+  ) : (
+    <NavLink {...props} className={props.className} />
+  );
 
 export default Nav;

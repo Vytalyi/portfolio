@@ -40,8 +40,17 @@ const caseStudiesCollection = defineCollection({
     }),
 });
 
+const socialLinksCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    url: z.string(),
+  }),
+});
+
 export const collections = {
   experience: experienceCollection,
   skills: skillsCollection,
   case_studies: caseStudiesCollection,
+  social_links: socialLinksCollection,
 };

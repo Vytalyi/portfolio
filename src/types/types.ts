@@ -1,12 +1,20 @@
 export interface NavProps {
+  className?: string;
   items: NavLinkProps[];
+}
+
+export interface DropdownProps {
+  className?: string;
+  item: NavLinkProps;
 }
 
 export interface NavLinkProps {
   className?: string;
-  url: string;
+  url?: string;
   text: string;
-  active: boolean;
+  active?: boolean;
+  children?: Array<Omit<NavLinkProps, 'className'>>;
+  target?: string;
 }
 
 export type PageNameType = 'home' | 'case_studies' | 'contacts';
