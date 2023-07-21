@@ -22,6 +22,7 @@ export type PageNameType = 'home' | 'case_studies' | 'contacts';
 export interface BadgeProps {
   type: 'gray' | 'green' | 'blue';
   text: string;
+  size: 'medium' | 'small';
 }
 
 export interface ExperienceProps {
@@ -59,5 +60,7 @@ export interface ImageGalleryProps {
 }
 
 export interface CaseStudyStatsProps {
+  className?: string;
   stats: Array<[string, string?]>;
+  size: 'small' | 'large';
 }

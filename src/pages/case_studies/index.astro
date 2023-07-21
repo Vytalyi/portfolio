@@ -13,8 +13,8 @@ allCaseStudies.sort((a, b) =>
   <div
     class='max-w-[540px] sm:max-w-[604px] md:max-w-[720px] lg:max-w-full xl:px-12 2xl:max-w-[1400px] mx-auto'
   >
-    <div class='mx-auto max-w-7xl px-0 sm:px-6 lg:px-8 my-8'>
-      <div class='grid grid-cols-1 sm:grid-cols-2 sm:grid-gap-6 gap-10 w-full'>
+    <div class='mx-auto max-w-5xl px-0 sm:px-6 lg:px-8 my-8'>
+      <div class='grid grid-cols-1 sm:grid-gap-6 gap-10 w-full'>
         {
           allCaseStudies.map((caseStudy) => (
             <CaseStudyCard
@@ -44,12 +44,3 @@ allCaseStudies.sort((a, b) =>
     </div>
   </div>
 </Layout>
-
-<style>
-  .link:hover {
-    /* eslint-disable-astro/no-unused-css-selector */
-    .link-img {
-      opacity: 0.9;
-    }
-  }
-</style>

@@ -11,6 +11,7 @@ import ContentBody from '../../components/typography/ContentBody.astro';
 import ContentParagraph from '../../components/typography/ContentParagraph.astro';
 import ImageGallery from '../../components/ImageGallery.astro';
 import CaseStudyStats from '../../components/CaseStudyStats.astro';
+import { getDurationString } from '../../duration';
 
 export async function getStaticPaths() {
   const allCaseStudies = await getCollection('case_studies');
@@ -27,16 +28,7 @@ const caseStudy = (await getEntryBySlug(
   slug,
 )) as CollectionEntry<'case_studies'>;
 
-const start = caseStudy.data.end.getTime();
-const end = caseStudy.data.start.getTime();
-const diffTime = Math.abs(start - end);
-const months = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
-const remMonths = months % 12;
-const remYears = Math.floor(months / 12);
-
-const durationStr =
-  (remYears > 0 ? `${remYears} year${remYears > 1 ? 's' : ''}` : '') +
-  (remMonths > 0 ? ` ${remMonths} month${remMonths > 1 ? 's' : ''}` : '');
+const durationStr = getDurationString(caseStudy.data.start, caseStudy.data.end);
 
 const images = caseStudy.data.images.filter(
   (img) => img.height > 500 && img.width > 500,
@@ -56,6 +48,7 @@ const images = caseStudy.data.images.filter(
       {caseStudy?.data.client}
     </p>
     <CaseStudyStats
+      size='large'
       stats={[
         ['Duration', durationStr],
         ['Country', caseStudy.data.location],

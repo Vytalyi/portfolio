@@ -1,17 +1,20 @@
 ---
 import type { BadgeProps as Props } from '../types/types';
 
-const { type, text } = Astro.props;
+const { type, text, size } = Astro.props;
 
 const classes = {
   gray: 'bg-gray-700 text-gray-300',
   green: 'bg-green-900 text-green-300',
   blue: 'bg-blue-900 text-blue-300',
 }[type];
+
+const sizes = {
+  small: 'text-xs font-medium mr-1 px-1 py-1 mb-1',
+  medium: 'text-sm font-medium mr-2 px-2.5 py-0.5 mb-2',
+}[size];
 ---
 
-<span
-  class=`text-sm font-medium mr-2 px-2.5 py-0.5 mb-2 rounded whitespace-nowrap ${classes}`
->
+<span class=`rounded whitespace-nowrap ${sizes} ${classes}`>
   {text}
 </span>

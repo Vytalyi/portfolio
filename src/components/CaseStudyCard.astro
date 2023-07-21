@@ -1,8 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import type { CaseStudyCardProps as Props } from '../types/types';
+import Badge from './Badge.astro';
+import CaseStudyStats from './CaseStudyStats.astro';
+import { getDurationString } from '../duration';
 
 const { caseStudy } = Astro.props;
+
+const durationStr = getDurationString(caseStudy.start, caseStudy.end);
 ---
 
 <div
@@ -14,7 +19,7 @@ const { caseStudy } = Astro.props;
   >
     {
       caseStudy.images.length > 0 && (
-        <div class='sm:h-48 sm:w-full lg:w-48 lg:h-full lg:shrink-0'>
+        <div class='sm:h-96 sm:w-full lg:w-96 lg:h-full lg:shrink-0'>
           <Image
             class='link-img object-cover h-full w-full rounded-t-lg lg:rounded-none lg:rounded-l-lg'
             src={caseStudy.images[0]}
@@ -31,6 +36,36 @@ const { caseStudy } = Astro.props;
       <p class='font-normal text-gray-500'>
         {caseStudy.client != null ? caseStudy.client : caseStudy.project}
       </p>
+      <p class='font-normal text-gray-500 mt-4'>
+        Role: {caseStudy.role}
+      </p>
+      <div class='flex flex-wrap mt-4'>
+        {
+          caseStudy.skills.map((s) => (
+            <Badge type='gray' size='medium' text={s} />
+          ))
+        }
+      </div>
+      <CaseStudyStats
+        className='border-t border-slate-600 border-solid	'
+        size='small'
+        stats={[
+          ['Duration', durationStr],
+          ['Country', caseStudy.location],
+          ['Industry', caseStudy.industry],
+          ['Type', caseStudy.type],
+          ['Size', caseStudy.size],
+        ]}
+      />
     </div>
   </a>
 </div>
+
+<style>
+  .link:hover {
+    /* eslint-disable-astro/no-unused-css-selector */
+    .link-img {
+      opacity: 0.9;
+    }
+  }
+</style>
