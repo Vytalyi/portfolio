@@ -11,7 +11,16 @@ project: Cloudpages is an innovative product which provides highly designed UX f
 role: Operating as a Frontend Tech Lead within local team of 2 frontend devs integrated into offshore team of 12 devs.
 responsibilities: Onsite onboarding, product development, coordinating team, cross code review,
 skills:
-  ["BackboneJS", "RequireJS", "JQuery", "Node", "Express", "Janrain", ".Net"]
+  [
+    "Javascript",
+    "BackboneJS",
+    "RequireJS",
+    "JQuery",
+    "Node",
+    "Express",
+    "Janrain",
+    ".Net",
+  ]
 results:
   [
     "Forming local team.",

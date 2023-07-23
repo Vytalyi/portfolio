@@ -12,11 +12,11 @@ role: Operating as a Frontend Tech Lead of 8 frontend devs withing a cross-funct
 responsibilities: Establish development process, team coordination & scrum activities, triaging tickets, demo support, scope planning & estimation, team expansion & onboarding, development of Javascript and HTML components, supervision, cross code review.
 skills:
   [
-    "Gulp",
-    "SWIG",
     "SASS",
     "JavaScript",
     "JQuery",
+    "SWIG",
+    "Gulp",
     "Responsive Design",
     "Zeplin",
     "ASP.NET",

@@ -12,6 +12,7 @@ role: I joined the team of 3 frontend and 15+ devs as a Senior Frontend Develope
 responsibilities: Solution audit, bug fixes, identifying technical debt.
 skills:
   [
+    "Javascript",
     "React",
     "Redux",
     "IndexedDb",

@@ -13,6 +13,7 @@ responsibilities: Development of React components, writing tests, reverse engine
 skills:
   [
     "Sitecore",
+    "Javascript",
     "React",
     "Redux",
     "Typescript",

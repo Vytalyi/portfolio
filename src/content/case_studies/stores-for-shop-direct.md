@@ -10,7 +10,7 @@ location: UK
 project: Product contains 4 retail stores with similar experience bulit with ATG plattform, with shared fromtend built as a reusable jQuery scripts & styles, focus on providing reusable scripts and highly customizable themes. Additionally due to architecture & plattform complexity there was a business need to solve problem of constantly increasing UI bugs.
 role: Operating as a Frontend Tech Lead of 4 devs withing a cross-functional team of 12+ people.
 responsibilities: Onsite onboarding, establish development & communication processes, team coordination, learning ATG plattform to share experience within a team, scope planning & estimation, development of jQuery scripts, supervision, cross code review.
-skills: ["ATG", "jQuery", "Grunt", "Gulp", "Bootstrap"]
+skills: ["ATG", "Javascript", "jQuery", "Grunt", "Gulp", "Bootstrap"]
 results:
   [
     "Conducted discovery phase onsite for frontend dev team, with intensive learning of complicated ATG plattform, its technical specifications & frontend specific corporate processes & standards.",

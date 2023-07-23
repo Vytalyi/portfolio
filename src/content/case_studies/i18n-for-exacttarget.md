@@ -15,8 +15,8 @@ results:
   [
     "Developed i18n solution with performance & scalability in mind.",
     "Made complex refactoring of existing codebase to support dynamic translations.",
-    "Developed helper apps to speedup development - Bing Translator to provide default translations, Resource Manager to sync resources with latest translations, Code Validator to collect all places with translations, built on regexes..",
-    "Developed Visual Studio plugin with automated detection of ",
+    "Developed helper apps to speedup development - Bing Translator to provide default translations, Resource Manager to sync resources with latest translations, Code Validator to collect all places with translations, built on regexes.",
+    "Developed Visual Studio plugin with automated detection of translation hook.",
   ]
 images: [
   "./images/i18n-for-exacttarget/1.jpg"

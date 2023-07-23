@@ -12,12 +12,13 @@ role: Operating as a part time Key Developer within multiple teams of 3-5 full s
 responsibilities: Releases support, scope estimation, detailed requirements analysis, mockups review, React components development, writing tests, cross code review.
 skills:
   [
+    "Javascript",
     "React",
     "Redux",
     "FlowJS",
     "GraphQL",
     "Styled-Components",
-    "enzyme",
+    "Enzyme",
     "Ava",
     "Sinon",
     "Webpack",

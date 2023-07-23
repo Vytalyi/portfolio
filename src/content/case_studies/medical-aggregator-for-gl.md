@@ -13,8 +13,6 @@ results:
   [
     "Prototyping ASP.Net solution with real time high charts, including Admin Site for management & configurations.",
     "Measurement performance of MSSQL and MySQL databases working with millions records to predict real world behavior.",
-    "Developed helper apps to speedup development - Bing Translator to provide default translations, Resource Manager to sync resources with latest translations, Code Validator to collect all places with translations, built on regexes..",
-    "Developed Visual Studio plugin with automated detection of ",
   ]
 images: [
   "./images/medical-aggregator-for-gl/1.jpg",

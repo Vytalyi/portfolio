@@ -14,6 +14,7 @@ skills:
   [
     "Hybris",
     "AEM",
+    "Javascript",
     "jQuery",
     "Gulp",
     "Grunt",

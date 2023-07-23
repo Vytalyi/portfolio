@@ -13,9 +13,9 @@ responsibilities: Development of frontend, frontend build automation, performanc
 skills:
   [
     "Hybris",
+    "JavaScript",
     "HTML",
     "CSS",
-    "JavaScript",
     "jQuery",
     "JSP",
     "RequireJS",
